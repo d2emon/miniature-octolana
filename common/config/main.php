@@ -10,4 +10,9 @@ return [
 	    'showScriptName' => false,
 	],
     ],
+    'modules' => [
+	'trcards' => [
+	    'class' => 'common\modules\trcards\Module',
+	],
+    ],
 ];
