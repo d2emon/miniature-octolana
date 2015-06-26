@@ -45,13 +45,13 @@ class Trcard extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('trcards', 'ID'),
-            'url' => Yii::t('trcards', 'Url'),
-            'title' => Yii::t('trcards', 'Title'),
-            'image' => Yii::t('trcards', 'Image'),
-            'description' => Yii::t('trcards', 'Description'),
-            'created_at' => Yii::t('trcards', 'Created At'),
-            'updated_at' => Yii::t('trcads', 'Updated At'),
+            'id' => Yii::t('app', 'ID'),
+            'url' => Yii::t('app', 'Url'),
+            'title' => Yii::t('app', 'Title'),
+            'image' => Yii::t('app', 'Image'),
+            'description' => Yii::t('app', 'Description'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
         ];
     }
 }

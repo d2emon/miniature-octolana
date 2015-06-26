@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\modules\trcards\models\Trcard */
 
-$this->title = Yii::t('trcards', 'Create Trcard');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('trcards', 'Trcards'), 'url' => ['index']];
+$this->title = Yii::t('app', 'Create Trcard');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Trcards'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="trcard-create">
