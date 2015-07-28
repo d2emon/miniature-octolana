@@ -28,6 +28,9 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+	'yii2masonry' => [
+	    'class' => 'philippfrenzel\yii2masonry\yii2masonry',
+	],
     ],
     'modules' => [
 	'item' => [
