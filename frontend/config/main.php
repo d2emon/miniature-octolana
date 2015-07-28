@@ -36,6 +36,9 @@ return [
 	'item' => [
 	    'class' => 'frontend\modules\item\Module',
 	],
+	'games' => [
+	    'class' => 'frontend\modules\games\Module',
+	],
     ],
     'params' => $params,
 ];
