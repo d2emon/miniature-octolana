@@ -4,6 +4,7 @@ namespace frontend\modules\item\controllers;
 
 use Yii;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 use common\modules\trcards\models\Trcard;
 use common\modules\trcards\models\TrcardSearch;
 
@@ -46,7 +47,7 @@ class DefaultController extends Controller
      */
     protected function findModel($url)
     {
-        if (($model = Trcard::findOne($url)) !== null) {
+        if (($model = Trcard::findOne(["url" => $url])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
