@@ -33,6 +33,9 @@ return [
 	],
     ],
     'modules' => [
+	'site' => [
+	    'class' => 'frontend\modules\site\Module',
+	],
 	'item' => [
 	    'class' => 'frontend\modules\item\Module',
 	],

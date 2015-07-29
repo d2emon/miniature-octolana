@@ -4,6 +4,9 @@ return [
     // 'language' => 'en',
     // 'sourceLanguage' => 'en',
     'components' => [
+	'errorHandler' => [
+	    'errorAction' => 'error/index',
+	],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -30,6 +33,9 @@ return [
 	],
     ],
     'modules' => [
+	'errors' => [
+	    'class' => 'common\modules\errors\Module',
+	],
 	'trcards' => [
 	    'class' => 'common\modules\trcards\Module',
 	],
