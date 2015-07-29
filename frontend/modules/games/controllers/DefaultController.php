@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\data\ActiveDataProvider;
 use frontend\modules\games\models\GameCompany;
 use frontend\modules\games\models\BookAuthor;
+use frontend\modules\games\models\Genre;
 
 class DefaultController extends Controller
 {
@@ -17,6 +18,9 @@ class DefaultController extends Controller
 	    ]),
 	    'authors' => new ActiveDataProvider([
 	        'query' => BookAuthor::find(),
+	    ]),
+	    'genres' => new ActiveDataProvider([
+	        'query' => Genre::find(),
 	    ]),
 	]);
     }

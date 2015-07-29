@@ -1,3 +1,10 @@
+<?php
+$blocks = [
+    ['provider' => $companies, 'view' => '_company'],
+    ['provider' => $authors,   'view' => '_author'],
+    ['provider' => $genres,    'view' => '_genre'],
+];
+?>
 <div class="games-default-index">
     <h1><?= yii::t('games', 'Games') ?></h1>
     <?php \yii2masonry\yii2masonry::begin([
@@ -9,32 +16,20 @@
         <?php 
         $maxI = rand(2, 10);
         for($i=0; $i<$maxI; $i++):
-	?>
-        <?php 
-        $maxJ = rand(0, 5);
-        for($j=0; $j<$maxJ; $j++):
+	    foreach($blocks as $block):
+	        $maxJ = rand(0, 5);
+                for($j=0; $j<$maxJ; $j++):
 	?>
         <?= \yii\widgets\ListView::widget([
-	    'dataProvider' => $companies,
+	    'dataProvider' => $block['provider'],
 	    'itemOptions' => ['class' => 'item'],
-	    'itemView' => '_company',
+	    'itemView' => $block['view'],
 	    'summary'  => false,
             'layout'   => '{items}'
 	]); ?>
         <?php 
-        endfor;
-        $maxJ = rand(0, 5);
-        for($j=0; $j<$maxJ; $j++):
-	?>
-        <?= \yii\widgets\ListView::widget([
-	    'dataProvider' => $authors,
-	    'itemOptions' => ['class' => 'item'],
-	    'itemView' => '_author',
-	    'summary'  => false,
-            'layout'   => '{items}'
-	]); ?>
-	<?php 
-        endfor; 
+		endfor;
+	    endforeach;
         endfor;
         ?>
     <?php \yii2masonry\yii2masonry::end(); ?>
