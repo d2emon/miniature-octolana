@@ -5,8 +5,21 @@
         The action belongs to the controller "<?= get_class($this->context) ?>"
         in the "<?= $this->context->module->id ?>" module.
     </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+        <?php \yii2masonry\yii2masonry::begin([
+	    'clientOptions' => [
+	        'columnWidth'  => 2,
+	        'itemSelector' => '.item'
+	    ]
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => function ($model, $key, $index, $widget) {
+                return "<div>\n".$model->name."</div>\n<div>\n".$model->description."</div>\n";
+	    },
+		// 'itemView' => '@app/views/arbeiten/iviews/_view',
+	    'summary' => false,
+            'layout' => '{items}'
+	]); ?>
+        <?php \yii2masonry\yii2masonry::end(); ?>
 </div>
