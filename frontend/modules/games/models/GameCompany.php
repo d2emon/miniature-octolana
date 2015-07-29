@@ -57,11 +57,11 @@ class GameCompany extends \yii\db\ActiveRecord
     public function getAuthor()
     {
 	$author = $this->bookAuthor;
-	yii::trace(\yii\helpers\Json::encode(['author' => $author]));
-	if(!$author){
-	    $author = new BookAuthor;
-	}
-	yii::trace(\yii\helpers\Json::encode(['author' => $author]));
+	/*
+	 * if(!$author){
+	 * 	$author = new BookAuthor;
+	 * }
+	 */
         return $author ? $author : new BookAuthor;
     }
 	
