@@ -11,7 +11,7 @@ use Yii;
  * @property string $name
  * @property string $description
  *
- * @property BookAuthor[] $bookAuthors
+ * @property BookAuthor $bookAuthor
  */
 class GameCompany extends \yii\db\ActiveRecord
 {
@@ -49,8 +49,20 @@ class GameCompany extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBookAuthors()
+    public function getBookAuthor()
     {
-        return $this->hasMany(BookAuthor::className(), ['game_company_id' => 'id']);
+	return $this->hasOne(BookAuthor::className(), ['game_company_id' => 'id']);
     }
+
+    public function getAuthor()
+    {
+	$author = $this->bookAuthor;
+	yii::trace(\yii\helpers\Json::encode(['author' => $author]));
+	if(!$author){
+	    $author = new BookAuthor;
+	}
+	yii::trace(\yii\helpers\Json::encode(['author' => $author]));
+        return $author ? $author : new BookAuthor;
+    }
+	
 }

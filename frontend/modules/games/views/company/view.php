@@ -30,7 +30,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'description:ntext',
+            'description:paragraphs',
+	    [
+		'label' => $model->getAttributeLabel('name'),
+		'value' => $model->author->name,
+	    ],
+	    [
+		'label'  => $model->getAttributeLabel('description'),
+		'value'  => $model->author->description,
+		// 'format' => 'paragraphs',
+	    ],
         ],
     ]) ?>
 
