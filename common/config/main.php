@@ -1,8 +1,8 @@
 <?php
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
-    'language' => 'en',
-    'sourceLanguage' => 'en',
+    // 'language' => 'en',
+    // 'sourceLanguage' => 'en',
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -11,13 +11,20 @@ return [
 	    'enablePrettyUrl' => true,
 	    'showScriptName' => false,
 	],
-	'i8n' => [
-            'class' => 'yii\i18n\PhpMessageSource',
+	'i18n' => [
 	    'translations' => [
+		'*' => [
+		    'class' => 'yii\i18n\PhpMessageSource',
+		    'basePath' => '@app/messages',
+		],
 		'trcards.*' => [
 		    'class' => 'yii\i18n\PhpMessageSource',
 		    'basePath' => '@common/messages',
 		    'sourceLanguage' => 'en',
+		],
+		'games' => [
+		    'class' => 'yii\i18n\PhpMessageSource',
+		    'basePath' => '@app/messages',
 		],
 	    ],
 	],
