@@ -8,22 +8,14 @@ use frontend\modules\games\models\Genre;
 use yii\grid\GridView;
 use yii\data\ArrayDataProvider;
 use yii\helpers\ArrayHelper;
+use frontend\modules\games\helpers\GenrePath;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\games\models\Genre */
 
-$path = [];
-foreach($model->supGenres as $supgenre) {
-    $path[] = [
-        'label' => $supgenre->name,
-	'url'   => ['/games/genre/view', 'id' => $supgenre->id],
-    ];
-}
-$path[] = $model->name;
-
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('games', 'Genres'), 'url' => ['index']];
-$this->params['breadcrumbs'] = array_merge($this->params['breadcrumbs'], $path);
+$this->params['breadcrumbs'] = array_merge($this->params['breadcrumbs'], GenrePath::forModel($model));
 ?>
 <div class="genre-view">
 
@@ -48,7 +40,7 @@ $this->params['breadcrumbs'] = array_merge($this->params['breadcrumbs'], $path);
 		'label' => Yii::t('games', 'Path'),
 		'value' => Breadcrumbs::widget([
 		    'homeLink' => false,
-		    'links'    => $path,
+		    'links'    => GenrePath::forModel($model),
 		]),
 		'format' => 'raw',
 	    ],

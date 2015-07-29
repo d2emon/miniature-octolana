@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Breadcrumbs;
+use frontend\modules\games\helpers\GenrePath;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -23,10 +25,17 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'name',
-            'description:ntext',
-            'parent_genre_id',
-
+	    [
+		'label' => Yii::t('games', 'Path'),
+		'content' => function ($model, $key, $index, $column)
+		{
+		    return Breadcrumbs::widget([
+		        'homeLink' => false,
+		        'links'    => GenrePath::forModel($model),
+		    ]);
+		},
+		'value' => 'parent_genre_id',
+	    ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
