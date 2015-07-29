@@ -3,6 +3,7 @@ $blocks = [
     ['provider' => $companies, 'view' => '_company'],
     ['provider' => $authors,   'view' => '_author'],
     ['provider' => $genres,    'view' => '_genre'],
+    ['provider' => $tags,      'view' => '_tag'],
 ];
 ?>
 <div class="games-default-index">

@@ -7,6 +7,7 @@ use yii\data\ActiveDataProvider;
 use frontend\modules\games\models\GameCompany;
 use frontend\modules\games\models\BookAuthor;
 use frontend\modules\games\models\Genre;
+use frontend\modules\games\models\Tag;
 
 class DefaultController extends Controller
 {
@@ -21,6 +22,9 @@ class DefaultController extends Controller
 	    ]),
 	    'genres' => new ActiveDataProvider([
 	        'query' => Genre::find(),
+	    ]),
+	    'tags' => new ActiveDataProvider([
+	        'query' => Tag::find(),
 	    ]),
 	]);
     }
