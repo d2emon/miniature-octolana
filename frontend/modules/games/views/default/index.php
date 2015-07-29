@@ -7,19 +7,108 @@
     </p>
         <?php \yii2masonry\yii2masonry::begin([
 	    'clientOptions' => [
-	        'columnWidth'  => 2,
+	        'columnWidth'  => 256,
 	        'itemSelector' => '.item'
 	    ]
 	]); ?>
         <?= \yii\widgets\ListView::widget([
 	    'dataProvider' => $companies,
 	    'itemOptions' => ['class' => 'item'],
-	    'itemView' => function ($model, $key, $index, $widget) {
-                return "<div>\n".$model->name."</div>\n<div>\n".$model->description."</div>\n";
-	    },
-		// 'itemView' => '@app/views/arbeiten/iviews/_view',
-	    'summary' => false,
-            'layout' => '{items}'
+	    'itemView' => '_company',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_company',
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_company',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_company',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_company',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_company',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $companies,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_company',
+	    'summary'  => false,
+            'layout'   => '{items}'
+	]); ?>
+        <?= \yii\widgets\ListView::widget([
+	    'dataProvider' => $authors,
+	    'itemOptions' => ['class' => 'item'],
+	    'itemView' => '_author',
+	    'summary'  => false,
+            'layout'   => '{items}'
 	]); ?>
         <?php \yii2masonry\yii2masonry::end(); ?>
 </div>

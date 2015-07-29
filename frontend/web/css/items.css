@@ -1,3 +1,13 @@
+.list-view {
+    display: inline-block;
+}
 .item {
-    width: 30%;
+    display: inline-block;
+}
+.item a {
+    display: inline-block;
+    width: 128px;
+}
+.item .w2 {
+    width: 200%;
 }
