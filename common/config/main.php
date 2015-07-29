@@ -4,9 +4,6 @@ return [
     // 'language' => 'en',
     // 'sourceLanguage' => 'en',
     'components' => [
-	'errorHandler' => [
-	    'errorAction' => 'error/index',
-	],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
