@@ -7,6 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model frontend\modules\games\models\GameCompany */
 
 $this->title = $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('games', 'Games'), 'url' => ['/games']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('games', 'Game Companies'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -30,16 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
+	    [
+		'label'  => $model->author->getAttributeLabel('name'),
+		'value'  => Html::a($model->author->name, ['/games/author/view', 'id' => $model->author->id]),
+		'format' => 'raw',
+	    ],
             'description:paragraphs',
-	    [
-		'label' => $model->getAttributeLabel('name'),
-		'value' => $model->author->name,
-	    ],
-	    [
-		'label'  => $model->getAttributeLabel('description'),
-		'value'  => $model->author->description,
-		// 'format' => 'paragraphs',
-	    ],
         ],
     ]) ?>
 
