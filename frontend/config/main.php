@@ -40,7 +40,7 @@ return [
 	    'class' => 'frontend\modules\item\Module',
 	],
 	'games' => [
-	    'class' => 'frontend\modules\games\Module',
+	    'class' => 'd2emon\games\Module',
 	],
     ],
     'params' => $params,
