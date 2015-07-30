@@ -11,12 +11,19 @@
         "source": "https://github.com/d2emonium/miniature-octolana/wiki"
     },
     "minimum-stability": "dev",
+    "repositories":[
+        {
+            "type": "git",
+	          "url":  "git@github.com:d2emon/game-collection.git"
+        }
+    ],
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.4",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "philippfrenzel/yii2masonry": "*"
+        "philippfrenzel/yii2masonry": "*",
+        "d2emon/game-collection": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
