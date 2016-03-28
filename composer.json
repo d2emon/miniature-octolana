@@ -15,6 +15,10 @@
         {
             "type": "git",
 	          "url":  "git@github.com:d2emon/game-collection.git"
+        },
+        {
+            "type": "git",
+	          "url":  "git@github.com:d2emon/trcards.git"
         }
     ],
     "require": {

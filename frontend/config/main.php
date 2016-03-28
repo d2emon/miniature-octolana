@@ -39,6 +39,9 @@ return [
 	'item' => [
 	    'class' => 'frontend\modules\item\Module',
 	],
+	'trcards' => [
+	    'class' => 'd2emon\trcards\Module',
+	],
 	'games' => [
 	    'class' => 'd2emon\games\Module',
 	],
