@@ -30,11 +30,14 @@ return [
 	],
     ],
     'modules' => [
-	'errors' => [
-	    'class' => 'common\modules\errors\Module',
+	'error' => [
+	    'class' => 'common\modules\error\Module',
 	],
 	'trcards' => [
 	    'class' => 'common\modules\trcards\Module',
+	],
+	'books' => [
+	    'class' => 'd2emon\books\Module',
 	],
     ],
 ];
