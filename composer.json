@@ -18,6 +18,10 @@
         },
         {
             "type": "git",
+	          "url":  "git@github.com:d2emon/book-collection.git"
+        },
+        {
+            "type": "git",
 	          "url":  "git@github.com:d2emon/trcards.git"
         }
     ],
@@ -27,7 +31,12 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "philippfrenzel/yii2masonry": "*",
-        "d2emon/game-collection": "*"
+        "d2emon/book-collection": "*",
+        "d2emon/game-collection": "*",
+        "codeception/codeception": "2.0.*",
+        "codeception/specify": "*",
+        "codeception/verify": "*",
+        "codeception/c3": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
