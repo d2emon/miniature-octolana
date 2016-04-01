@@ -21,5 +21,14 @@ return [
             ],
         ],
     ],
+    'controllerMap' => [
+	'fixture' => [
+	    'class'     => 'yii\console\controllers\FixtureController',
+	    'namespace' => 'tests',
+	    'globalFixtures' => [
+		'tests\codeception\books\unit\fixtures\BookGenre',
+	    ],
+	],
+    ],
     'params' => $params,
 ];
