@@ -33,7 +33,7 @@
         "philippfrenzel/yii2masonry": "*",
         "d2emon/book-collection": "*",
         "d2emon/game-collection": "*",
-        "codeception/codeception": "2.0.*",
+        "codeception/codeception": "1.8.*",
         "codeception/specify": "*",
         "codeception/verify": "*",
         "codeception/c3": "*"
