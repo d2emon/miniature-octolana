@@ -3,10 +3,10 @@
 // You should not change it manually as it will be overwritten on next build
 // @codingStandardsIgnoreFile
 
-namespace tests\codeception\games;
+
 use \Codeception\Maybe;
 use Codeception\Module\PhpBrowser;
-use tests\codeception\common\_support\FixtureHelper;
+use Codeception\Module\WebHelper;
 
 /**
  * Inherited methods
@@ -24,7 +24,7 @@ use tests\codeception\common\_support\FixtureHelper;
  * @method void offsetUnset($offset)
 */
 
-class AcceptanceTester extends \Codeception\AbstractGuy
+class WebGuy extends \Codeception\AbstractGuy
 {
     
     /**
@@ -2051,25 +2051,6 @@ class AcceptanceTester extends \Codeception\AbstractGuy
      */
     public function getName() {
         $this->scenario->addStep(new \Codeception\Step\Action('getName', func_get_args()));
-        if ($this->scenario->running()) {
-            $result = $this->scenario->runStep();
-            return new Maybe($result);
-        }
-        return new Maybe();
-    }
-
- 
-    /**
-     * This method is generated.
-     * Documentation taken from corresponding module.
-     * ----------------------------------------------
-     *
-     * @inheritdoc
-     * @see tests\codeception\common\_support\FixtureHelper::fixtures()
-     * @return \Codeception\Maybe
-     */
-    public function fixtures() {
-        $this->scenario->addStep(new \Codeception\Step\Action('fixtures', func_get_args()));
         if ($this->scenario->running()) {
             $result = $this->scenario->runStep();
             return new Maybe($result);

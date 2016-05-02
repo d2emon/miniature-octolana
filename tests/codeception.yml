@@ -40,7 +40,7 @@ config:
     # PLEASE ADJUST IT TO THE ACTUAL ENTRY SCRIPT URL
     test_entry_url: http://localhost:8080
 include:
-  # - codeception/common
+  - codeception/common
   # - codeception/console
   # - codeception/backend
   - codeception/frontend
